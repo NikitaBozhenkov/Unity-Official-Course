@@ -41,11 +41,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DestroyOutOfBounds.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SpawnManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/DetectCollision.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MoveForward.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DetectCollision.cs" />
       </list>
     </option>
   </component>
@@ -101,7 +101,7 @@
       <updated>1605093914978</updated>
       <workItem from="1605093930024" duration="133000" />
       <workItem from="1605094102376" duration="48000" />
-      <workItem from="1605094207746" duration="7940000" />
+      <workItem from="1605094207746" duration="8533000" />
     </task>
     <servers />
   </component>
