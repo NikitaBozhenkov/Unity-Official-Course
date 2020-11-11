@@ -24,6 +24,14 @@
       <change beforePath="$PROJECT_DIR$/../Car Driving/Assets/Course Library/_Source_Files/_LICENSE.txt.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Car Driving/Assets/Course Library/_Source_Files/_LICENSE.txt.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Car Driving/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../Car Driving/ProjectSettings/EditorSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Car Driving/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../Car Driving/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Feed the Animals/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Feed the Animals/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Feed the Animals/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Feed the Animals/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Challenge 2/Challenge 2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Challenge 2/Challenge 2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Challenge 2/Prefabs/Dog.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Challenge 2/Prefabs/Dog.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Challenge 2/Scripts/DestroyOutOfBoundsX.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Challenge 2/Scripts/DestroyOutOfBoundsX.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Challenge 2/Scripts/PlayerControllerX.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Challenge 2/Scripts/PlayerControllerX.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Challenge 2/Scripts/SpawnManagerX.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Challenge 2/Scripts/SpawnManagerX.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +54,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/SpawnManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MoveForward.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DetectCollision.cs" />
+        <option value="$PROJECT_DIR$/Assets/Challenge 2/Scripts/DestroyOutOfBoundsX.cs" />
+        <option value="$PROJECT_DIR$/Assets/Challenge 2/Scripts/SpawnManagerX.cs" />
+        <option value="$PROJECT_DIR$/Assets/Challenge 2/Scripts/PlayerControllerX.cs" />
       </list>
     </option>
   </component>
@@ -101,7 +112,7 @@
       <updated>1605093914978</updated>
       <workItem from="1605093930024" duration="133000" />
       <workItem from="1605094102376" duration="48000" />
-      <workItem from="1605094207746" duration="8533000" />
+      <workItem from="1605094207746" duration="9362000" />
     </task>
     <servers />
   </component>
