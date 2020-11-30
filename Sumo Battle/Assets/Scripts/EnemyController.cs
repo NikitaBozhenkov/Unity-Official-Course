@@ -15,6 +15,10 @@ public class EnemyController : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+        if (transform.position.y < -10) {
+            Destroy(gameObject);
+        }
+
         var lookDirection = (_player.transform.position - transform.position).normalized;
         _rb.AddForce(lookDirection * _speed);
     }
