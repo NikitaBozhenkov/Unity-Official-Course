@@ -20,13 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b920244-e52f-4143-9acb-6aecb9d77972" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Course Library/Environments/Ground/Ground_Tile_Cube_Flat_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Course Library/Environments/Ground/Ground_Tile_Cube_Flat_01.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Course Library/_Source_Files/FBX/Animations.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Course Library/_Source_Files/FBX/Animations.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Course Library/_Source_Files/FBX/Animations/SimpleCharacter_5.0.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Course Library/_Source_Files/FBX/Animations/SimpleCharacter_5.0.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerMove.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +84,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1607183798925</updated>
-      <workItem from="1607183804672" duration="2653000" />
+      <workItem from="1607183804672" duration="3005000" />
     </task>
     <servers />
   </component>

@@ -8,7 +8,8 @@ public class PlayerMove : MonoBehaviour {
 
     private Rigidbody _rb;
     private Animator _animator;
-    
+    private bool _isGrounded;
+
     [SerializeField] private float speed;
     [SerializeField] private float jumpForce;
 
@@ -23,9 +24,10 @@ public class PlayerMove : MonoBehaviour {
         HorizontalInput = Input.GetAxis("Horizontal");
         _rb.AddForce(Vector3.right * (speed * HorizontalInput), ForceMode.VelocityChange);
 
-        if (Input.GetKeyDown(KeyCode.Space)) {
+        if (Input.GetKeyDown(KeyCode.Space) && _isGrounded) {
             _animator.SetBool("Jump_b", true);
             _rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            _isGrounded = false;
         }
     }
 
@@ -33,5 +35,9 @@ public class PlayerMove : MonoBehaviour {
         if (other.gameObject.CompareTag("Ground")) {
             _animator.SetBool("Jump_b", false);
         }
+    }
+
+    private void OnCollisionEnter(Collision other) {
+        if (other.gameObject.CompareTag("Ground")) _isGrounded = true;
     }
 }
