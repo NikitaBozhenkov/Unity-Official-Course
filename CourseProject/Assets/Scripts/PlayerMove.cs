@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour {
     public float HorizontalInput { get; set; }
+    public bool Jump { get; set; }
 
     private Rigidbody _rb;
     private Animator _animator;
@@ -21,10 +22,10 @@ public class PlayerMove : MonoBehaviour {
 
     // Update is called once per frame
     void FixedUpdate() {
-        HorizontalInput = Input.GetAxis("Horizontal");
+        // HorizontalInput = Input.GetAxis("Horizontal");
         _rb.AddForce(Vector3.right * (speed * HorizontalInput), ForceMode.VelocityChange);
 
-        if (Input.GetKeyDown(KeyCode.Space) && _isGrounded) {
+        if (Jump && _isGrounded) {
             _animator.SetBool("Jump_b", true);
             _rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             _isGrounded = false;
@@ -39,5 +40,6 @@ public class PlayerMove : MonoBehaviour {
 
     private void OnCollisionEnter(Collision other) {
         if (other.gameObject.CompareTag("Ground")) _isGrounded = true;
+        Debug.Log(other.gameObject.name);
     }
 }
