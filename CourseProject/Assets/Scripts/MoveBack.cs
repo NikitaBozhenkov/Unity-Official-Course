@@ -6,6 +6,8 @@ public class MoveBack : MonoBehaviour {
     [SerializeField] private float speed;
     [SerializeField] private Vector3 moveDirection;
     private Rigidbody _rb;
+
+    [SerializeField] private float zDestroy = -5f;
     
     // Start is called before the first frame update
     void Start() {
@@ -17,6 +19,11 @@ public class MoveBack : MonoBehaviour {
         var vel = _rb.velocity;
         vel.z = moveDirection.z * speed;
         _rb.velocity = vel;
-        //_rb.AddForce(moveDirection * speed, ForceMode.Force);
+
+        if (transform.position.z < zDestroy) {
+            Destroy(gameObject);
+        }
     }
+
+
 }
