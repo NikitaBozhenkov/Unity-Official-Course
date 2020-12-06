@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 5899979427363966466}
   - component: {fileID: 9099822768494591508}
+  - component: {fileID: 114988209648122410}
   m_Layer: 0
   m_Name: Obsacle_2
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45,6 +46,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.9298033, y: 1.7423327, z: 0.9251101}
   m_Center: {x: 0.0017619431, y: 0.86689925, z: 0.00103724}
+--- !u!114 &114988209648122410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5899979427363803682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33472aa2455fb354ab1960ce23ebb1df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveDirection: {x: 0, y: 0, z: 0}
+  speed: 15
+  deleteZ: -8
 --- !u!1 &5899979427363803684
 GameObject:
   m_ObjectHideFlags: 0

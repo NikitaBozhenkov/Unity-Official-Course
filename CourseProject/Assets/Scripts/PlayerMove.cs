@@ -39,7 +39,11 @@ public class PlayerMove : MonoBehaviour {
     }
 
     private void OnCollisionEnter(Collision other) {
-        if (other.gameObject.CompareTag("Ground")) _isGrounded = true;
+        if (other.gameObject.CompareTag("Powerup") || other.gameObject.CompareTag("Obstacle") ||
+            other.gameObject.CompareTag("Enemy")) {
+            Debug.Log("Game Over");
+        } else if (other.gameObject.CompareTag("Ground")) _isGrounded = true;
+
         Debug.Log(other.gameObject.name);
     }
 }

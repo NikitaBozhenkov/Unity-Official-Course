@@ -36,7 +36,9 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="ButtonInput.cs" t="Include" />
+          <e p="MoveBack.cs" t="Include" />
           <e p="PlayerMove.cs" t="Include" />
+          <e p="SpawnManager.cs" t="Include" />
         </e>
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">
