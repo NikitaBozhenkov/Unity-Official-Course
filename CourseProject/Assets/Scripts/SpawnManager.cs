@@ -17,14 +17,20 @@ public class SpawnManager : MonoBehaviour {
     [SerializeField] private float obstacleSpawnDelay = 2f;
     [SerializeField] private float powerupSpawnDelay = 5f;
     
+    private GameplayController _gameplayController;
+    
+    
     // Start is called before the first frame update
     void Start() {
+        _gameplayController = GameObject.Find("Gameplay Controller").GetComponent<GameplayController>();
         InvokeRepeating(nameof(SpawnEnemy), spawnDelay, enemySpawnDelay);
         InvokeRepeating(nameof(SpawnObstacle), spawnDelay, obstacleSpawnDelay);
         InvokeRepeating(nameof(SpawnPowerup), spawnDelay, powerupSpawnDelay);
     }
 
     void SpawnEnemy() {
+        if(_gameplayController.IsGameOver) return;
+        
         var go = enemyPrefabs[Random.Range(0, enemyPrefabs.Length)];
         var spawnPos = new Vector3(Random.Range(-xSpawnRange, xSpawnRange), ySpawn, zSpawn);
 
@@ -32,6 +38,8 @@ public class SpawnManager : MonoBehaviour {
     }
     
     void SpawnObstacle() {
+        if(_gameplayController.IsGameOver) return;
+        
         var go = obstaclePrefabs[Random.Range(0, obstaclePrefabs.Length)];
         var spawnPos = new Vector3(Random.Range(-xSpawnRange, xSpawnRange), ySpawn, zSpawn);
 
@@ -39,6 +47,8 @@ public class SpawnManager : MonoBehaviour {
     }
     
     void SpawnPowerup() {
+        if(_gameplayController.IsGameOver) return;
+        
         var spawnPos = new Vector3(Random.Range(-xSpawnRange, xSpawnRange), ySpawn, zSpawn);
         
         Instantiate(powerupPrefab, spawnPos, powerupPrefab.transform.rotation);

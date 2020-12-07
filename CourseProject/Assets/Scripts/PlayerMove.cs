@@ -10,18 +10,24 @@ public class PlayerMove : MonoBehaviour {
     private Rigidbody _rb;
     private Animator _animator;
     private bool _isGrounded;
+    private bool _isPoweruped;
 
+    private GameplayController _gameplayController;
+    
     [SerializeField] private float speed;
     [SerializeField] private float jumpForce;
-
-    // Start is called before the first frame update
-    void Start() {
+    [SerializeField] private GameObject powerupIndicator;
+    [SerializeField] private ParticleSystem bumpParticle;
+    
+    private void Start() {
         _rb = GetComponent<Rigidbody>();
         _animator = GetComponent<Animator>();
+        _gameplayController = GameObject.Find("Gameplay Controller").GetComponent<GameplayController>();
     }
-
-    // Update is called once per frame
-    void FixedUpdate() {
+    
+    private void FixedUpdate() {
+        if (_gameplayController.IsGameOver) return;
+        
         // HorizontalInput = Input.GetAxis("Horizontal");
         _rb.AddForce(Vector3.right * (speed * HorizontalInput), ForceMode.VelocityChange);
 
@@ -39,11 +45,32 @@ public class PlayerMove : MonoBehaviour {
     }
 
     private void OnCollisionEnter(Collision other) {
-        if (other.gameObject.CompareTag("Powerup") || other.gameObject.CompareTag("Obstacle") ||
-            other.gameObject.CompareTag("Enemy")) {
-            Debug.Log("Game Over");
-        } else if (other.gameObject.CompareTag("Ground")) _isGrounded = true;
+        if (other.gameObject.CompareTag("Enemy")) {
+            _gameplayController.IsGameOver = true;
+            StartCoroutine(_gameplayController.ShowGameOverPanel());
+        } else if (other.gameObject.CompareTag("Obstacle")) {
+            if (_isPoweruped) {
+                _gameplayController.Score += 20f;
+                bumpParticle.Play();
+                Destroy(other.gameObject);
+            } else {
+                _gameplayController.IsGameOver = true;
+                StartCoroutine(_gameplayController.ShowGameOverPanel());
+            }
+        }else if (other.gameObject.CompareTag("Ground")) {
+            _isGrounded = true;
+        } else if (other.gameObject.CompareTag("Powerup")) {
+            _gameplayController.Score += 5f;
+            Destroy(other.gameObject);
+            _isPoweruped = true;
+            StartCoroutine(PowerUpDelay());
+            powerupIndicator.SetActive(true);
+        }
+    }
 
-        Debug.Log(other.gameObject.name);
+    private IEnumerator PowerUpDelay() {
+        yield return new WaitForSeconds(5f);
+        _isPoweruped = false;
+        powerupIndicator.SetActive(false);
     }
 }

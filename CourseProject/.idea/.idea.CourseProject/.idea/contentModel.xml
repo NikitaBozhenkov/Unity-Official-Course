@@ -36,6 +36,7 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="ButtonInput.cs" t="Include" />
+          <e p="GameplayController.cs" t="Include" />
           <e p="MoveBack.cs" t="Include" />
           <e p="MoveWall.cs" t="Include" />
           <e p="PlayerMove.cs" t="Include" />
