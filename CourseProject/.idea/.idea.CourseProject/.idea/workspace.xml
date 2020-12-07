@@ -20,13 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b920244-e52f-4143-9acb-6aecb9d77972" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CourseProject/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CourseProject/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CourseProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CourseProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Course Library/Particles/FX_DirtSplatter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Course Library/Particles/FX_DirtSplatter.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Course Library/Particles/FX_Explosion_Rubble.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Course Library/Particles/FX_Explosion_Rubble.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MoveBack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MoveBack.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MoveWall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MoveWall.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerMove.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/SpawnManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SpawnManager.cs" afterDir="false" />
     </list>
@@ -48,9 +42,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MoveWall.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MoveBack.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SpawnManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameplayController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMove.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SpawnManager.cs" />
       </list>
     </option>
   </component>
@@ -102,7 +96,7 @@
       <option name="presentableId" value="Default" />
       <updated>1607183798925</updated>
       <workItem from="1607183804672" duration="9038000" />
-      <workItem from="1607255348089" duration="10622000" />
+      <workItem from="1607255348089" duration="11128000" />
     </task>
     <servers />
   </component>

@@ -63,8 +63,8 @@ public class PlayerMove : MonoBehaviour {
             _gameplayController.Score += 5f;
             Destroy(other.gameObject);
             _isPoweruped = true;
+            powerupIndicator.SetActive(true); 
             StartCoroutine(PowerUpDelay());
-            powerupIndicator.SetActive(true);
         }
     }
 

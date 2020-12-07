@@ -15,7 +15,7 @@ public class SpawnManager : MonoBehaviour {
     [SerializeField] private float spawnDelay = 1f;
     [SerializeField] private float enemySpawnDelay = 1.5f;
     [SerializeField] private float obstacleSpawnDelay = 2f;
-    [SerializeField] private float powerupSpawnDelay = 5f;
+    [SerializeField] private float powerupSpawnDelay = 6f;
     
     private GameplayController _gameplayController;
     
