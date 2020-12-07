@@ -16,14 +16,17 @@ public class GameplayController : MonoBehaviour {
     // Update is called once per frame
     private void Update() {
         if(!IsGameOver) Score += scoreMultiplier * Time.deltaTime;
+        if (Score > GameManager.Instance.GetHighscore()) {
+            GameManager.Instance.SetHighscore((int)Score);
+        }
 
-        scoreText.SetText("Score:\n" + Score.ToString("0"));
+        scoreText.SetText("Score:\n" + ((int)Score).ToString("0"));
     }
 
     public IEnumerator ShowGameOverPanel() {
         yield return new WaitForSeconds(1f);
         gameoverPanel.SetActive(true);
-        gameoverScoreText.SetText("Score: " + Score.ToString("0"));
+        gameoverScoreText.SetText("Score: " + ((int)Score).ToString("0"));
     }
 
     public void RestartGame() {
@@ -31,7 +34,7 @@ public class GameplayController : MonoBehaviour {
     }
 
     public void Exit() {
-        Application.Quit();
+        SceneManager.LoadScene("Main Menu");
     }
     
     
