@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class SpawnManager : MonoBehaviour {
     [SerializeField] private GameObject[] enemyPrefabs;
@@ -9,49 +11,53 @@ public class SpawnManager : MonoBehaviour {
 
     [SerializeField] private float zSpawn;
     [SerializeField] private float ySpawn;
-    
-    [SerializeField] private float xSpawnRange;
 
-    [SerializeField] private float spawnDelay = 1f;
-    [SerializeField] private float enemySpawnDelay = 1.5f;
-    [SerializeField] private float obstacleSpawnDelay = 2f;
-    [SerializeField] private float powerupSpawnDelay = 6f;
+    [SerializeField] private float xSpawnRange;
     
+    [SerializeField] private float enemySpawnDelay = 1f;
+    [SerializeField] private float obstacleSpawnDelay = 1.5f;
+    [SerializeField] private float powerupSpawnDelay = 5f;
+
     private GameplayController _gameplayController;
-    
-    
+
+
     // Start is called before the first frame update
     void Start() {
         _gameplayController = GameObject.Find("Gameplay Controller").GetComponent<GameplayController>();
-        InvokeRepeating(nameof(SpawnEnemy), spawnDelay, enemySpawnDelay);
-        InvokeRepeating(nameof(SpawnObstacle), spawnDelay, obstacleSpawnDelay);
-        InvokeRepeating(nameof(SpawnPowerup), spawnDelay, powerupSpawnDelay);
+        for (var i = 0; i < 3; ++i) {
+            StartCoroutine(SpawnObject(i));
+        }
     }
 
-    void SpawnEnemy() {
-        if(_gameplayController.IsGameOver) return;
-        
-        var go = enemyPrefabs[Random.Range(0, enemyPrefabs.Length)];
-        var spawnPos = new Vector3(Random.Range(-xSpawnRange, xSpawnRange), ySpawn, zSpawn);
+    private IEnumerator SpawnObject(int key) {
+        while (!_gameplayController.IsGameOver) {
+            var delay = 1f;
+            var go = new GameObject();
+            switch (key) {
+                case 0:
+                    delay = enemySpawnDelay;
+                    go = enemyPrefabs[Random.Range(0, enemyPrefabs.Length)];
+                    break;
+                case 1:
+                    delay = obstacleSpawnDelay;
+                    go = obstaclePrefabs[Random.Range(0, enemyPrefabs.Length)];
+                    break;
+                case 2:
+                    delay = powerupSpawnDelay;
+                    go = powerupPrefab;
+                    break;
+            }
 
-        Instantiate(go, spawnPos, go.transform.rotation);
-    }
-    
-    void SpawnObstacle() {
-        if(_gameplayController.IsGameOver) return;
-        
-        var go = obstaclePrefabs[Random.Range(0, obstaclePrefabs.Length)];
-        var spawnPos = new Vector3(Random.Range(-xSpawnRange, xSpawnRange), ySpawn, zSpawn);
+            yield return new WaitForSeconds(delay);
+            if (_gameplayController.IsGameOver) continue;
+            var spawnPos = new Vector3(Random.Range(-xSpawnRange, xSpawnRange), ySpawn, zSpawn);
 
-        Instantiate(go, spawnPos, go.transform.rotation);
-    }
-    
-    void SpawnPowerup() {
-        if(_gameplayController.IsGameOver) return;
-        
-        var spawnPos = new Vector3(Random.Range(-xSpawnRange, xSpawnRange), ySpawn, zSpawn);
-        
-        Instantiate(powerupPrefab, spawnPos, powerupPrefab.transform.rotation);
+            Instantiate(go, spawnPos, go.transform.rotation);
+        }
     }
 
+    private void Update() {
+        if (enemySpawnDelay > 0.5) enemySpawnDelay -= Time.deltaTime / 100;
+        if (obstacleSpawnDelay > 0.5) obstacleSpawnDelay -= Time.deltaTime / 100;
+    }
 }

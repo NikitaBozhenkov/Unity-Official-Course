@@ -149,13 +149,12 @@ MonoBehaviour:
   - {fileID: 5899979427363803682, guid: 196b89017bcad104cb4574c25926be81, type: 3}
   powerupPrefab: {fileID: 5575428092006997390, guid: e6a53803d14219c46b693963a7693645,
     type: 3}
-  zSpawn: 60
+  zSpawn: 90
   ySpawn: 0.5
   xSpawnRange: 4
-  spawnDelay: 1
-  enemySpawnDelay: 1
-  obstacleSpawnDelay: 1.5
-  powerupSpawnDelay: 5
+  enemySpawnDelay: 2
+  obstacleSpawnDelay: 2
+  powerupSpawnDelay: 7
 --- !u!4 &63303900
 Transform:
   m_ObjectHideFlags: 0
@@ -1224,13 +1223,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
-  m_LocalRotation: {x: 0.3420201, y: 0, z: 0, w: 0.9396927}
+  m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
   m_LocalPosition: {x: 0, y: 17.9, z: -12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 40, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
 --- !u!1 &606639409
 GameObject:
   m_ObjectHideFlags: 0
