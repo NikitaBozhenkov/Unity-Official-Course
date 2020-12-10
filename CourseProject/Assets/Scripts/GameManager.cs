@@ -9,17 +9,37 @@ public class GameManager : MonoBehaviour {
     public static GameManager Instance = null;
 
     private const string HighscoreKey = "Highscore";
+    private const string UsernameKey = "Username";
     private Button _startButton;
+    [SerializeField] private GameObject loginPanel;
 
     void Start() {
         MakeSingleton();
-        if (!PlayerPrefs.HasKey(HighscoreKey)) {
-            SetHighscore(0);
+        if (!PlayerPrefs.HasKey(UsernameKey))
+        {
+            loginPanel.SetActive(true);
         }
+    }
+
+    public void Login(TextMeshProUGUI username)
+    {
+        SetUsername(username.text);
+        loginPanel.SetActive(false);
+        SetHighscore(0);
     }
 
     public int GetHighscore() {
         return PlayerPrefs.GetInt(HighscoreKey);
+    }
+
+    public string GetUsername()
+    {
+        return PlayerPrefs.GetString(UsernameKey);
+    }
+
+    public void SetUsername(string username)
+    {
+        PlayerPrefs.SetString(UsernameKey, username);
     }
 
     public void SetHighscore(int score) {
