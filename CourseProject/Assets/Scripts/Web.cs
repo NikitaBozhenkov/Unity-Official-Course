@@ -116,6 +116,7 @@ public class Web : MonoBehaviour {
 
     IEnumerator GetLeaders(UnityWebRequest www) {
         www.SetRequestHeader("Authorization", $"Token {token}");
+        www.SetRequestHeader("accept", "application/vnd.github.v3+json");
         yield return www.SendWebRequest();
         if (!www.isNetworkError) {
             Debug.Log("WWW success: " + www.downloadHandler.text);
