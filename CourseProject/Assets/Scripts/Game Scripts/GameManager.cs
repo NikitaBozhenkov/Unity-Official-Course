@@ -1,12 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
-    public static GameManager Instance = null;
+    public static GameManager Instance;
 
     private const string HighscoreKey = "Highscore";
     private const string UsernameKey = "Username";
@@ -15,14 +12,12 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         MakeSingleton();
-        if (!PlayerPrefs.HasKey(UsernameKey))
-        {
+        if (!PlayerPrefs.HasKey(UsernameKey)) {
             loginPanel.SetActive(true);
         }
     }
 
-    public void Login(TextMeshProUGUI username)
-    {
+    public void Login(TextMeshProUGUI username) {
         SetUsername(username.text);
         loginPanel.SetActive(false);
         SetHighscore(0);
@@ -32,19 +27,18 @@ public class GameManager : MonoBehaviour {
         return PlayerPrefs.GetInt(HighscoreKey);
     }
 
-    public string GetUsername()
-    {
+    public string GetUsername() {
         return PlayerPrefs.GetString(UsernameKey);
     }
 
-    public void SetUsername(string username)
-    {
+    private void SetUsername(string username) {
         PlayerPrefs.SetString(UsernameKey, username);
     }
 
     public void SetHighscore(int score) {
         PlayerPrefs.SetInt(HighscoreKey, score);
     }
+
     private void MakeSingleton() {
         if (Instance == null) {
             Instance = this;
@@ -54,5 +48,4 @@ public class GameManager : MonoBehaviour {
 
         DontDestroyOnLoad(gameObject);
     }
-
 }

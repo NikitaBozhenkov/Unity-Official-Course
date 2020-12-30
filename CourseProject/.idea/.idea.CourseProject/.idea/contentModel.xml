@@ -35,16 +35,23 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
-          <e p="ButtonInput.cs" t="Include" />
-          <e p="GameManager.cs" t="Include" />
-          <e p="GameplayController.cs" t="Include" />
-          <e p="LeadersController.cs" t="Include" />
-          <e p="LoadController.cs" t="Include" />
-          <e p="MoveBack.cs" t="Include" />
-          <e p="MoveWall.cs" t="Include" />
-          <e p="PlayerMove.cs" t="Include" />
-          <e p="SpawnManager.cs" t="Include" />
-          <e p="Web.cs" t="Include" />
+          <e p="Game Scripts" t="Include">
+            <e p="GameManager.cs" t="Include" />
+            <e p="GameplayController.cs" t="Include" />
+            <e p="MainMenuController.cs" t="Include" />
+          </e>
+          <e p="Move Scripts" t="Include">
+            <e p="ButtonInput.cs" t="Include" />
+            <e p="MoveBack.cs" t="Include" />
+            <e p="MoveWall.cs" t="Include" />
+            <e p="PlayerMove.cs" t="Include" />
+          </e>
+          <e p="Spawn Scripts" t="Include">
+            <e p="SpawnManager.cs" t="Include" />
+          </e>
+          <e p="Web Scripts" t="Include">
+            <e p="Web.cs" t="Include" />
+          </e>
         </e>
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">

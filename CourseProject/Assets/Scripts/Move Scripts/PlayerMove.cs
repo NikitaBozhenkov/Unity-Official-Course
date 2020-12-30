@@ -28,8 +28,7 @@ public class PlayerMove : MonoBehaviour {
 
     private void FixedUpdate() {
         if (_gameplayController.IsGameOver) return;
-
-        // HorizontalInput = Input.GetAxis("Horizontal");
+        
         _rb.AddForce(Vector3.right * (speed * HorizontalInput), ForceMode.VelocityChange);
 
         if (Jump && _isGrounded) {

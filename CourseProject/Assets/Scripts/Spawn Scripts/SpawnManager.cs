@@ -13,15 +13,14 @@ public class SpawnManager : MonoBehaviour {
     [SerializeField] private float ySpawn;
 
     [SerializeField] private float xSpawnRange;
-    
+
     [SerializeField] private float enemySpawnDelay = 1f;
     [SerializeField] private float obstacleSpawnDelay = 1.5f;
     [SerializeField] private float powerupSpawnDelay = 5f;
+    private const float SpawnDelayBound = 0.5f;
 
     private GameplayController _gameplayController;
-
-
-    // Start is called before the first frame update
+    
     void Start() {
         _gameplayController = GameObject.Find("Gameplay Controller").GetComponent<GameplayController>();
         for (var i = 0; i < 3; ++i) {
@@ -57,7 +56,7 @@ public class SpawnManager : MonoBehaviour {
     }
 
     private void Update() {
-        if (enemySpawnDelay > 0.5) enemySpawnDelay -= Time.deltaTime / 100;
-        if (obstacleSpawnDelay > 0.5) obstacleSpawnDelay -= Time.deltaTime / 100;
+        if (enemySpawnDelay > SpawnDelayBound) enemySpawnDelay -= Time.deltaTime / 100;
+        if (obstacleSpawnDelay > SpawnDelayBound) obstacleSpawnDelay -= Time.deltaTime / 100;
     }
 }
